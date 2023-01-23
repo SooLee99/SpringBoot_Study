@@ -1,4 +1,4 @@
-package startSpringBoot.helloSpringBoot;
+package start_SpringBoot.helloSpringBoot;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

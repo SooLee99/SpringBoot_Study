@@ -1,7 +1,6 @@
-package startSpringBoot.putAPI.dto;
+package start_SpringBoot.putAPI.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 public class CarDto {
     private String name;

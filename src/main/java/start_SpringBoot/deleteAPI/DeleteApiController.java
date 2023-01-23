@@ -1,4 +1,4 @@
-package startSpringBoot.deleteAPI;
+package start_SpringBoot.deleteAPI;
 
 import org.springframework.web.bind.annotation.*;
 

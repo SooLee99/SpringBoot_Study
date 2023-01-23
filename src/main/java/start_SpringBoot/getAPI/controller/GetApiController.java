@@ -1,6 +1,6 @@
-package startSpringBoot.getAPI.controller;
+package start_SpringBoot.getAPI.controller;
 
-import startSpringBoot.getAPI.dto.UserRequest;
+import start_SpringBoot.getAPI.dto.UserRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

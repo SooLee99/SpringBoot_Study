@@ -1,9 +1,9 @@
-package startSpringBoot.responseAPI.controller;
+package start_SpringBoot.responseAPI.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import startSpringBoot.responseAPI.dto.User;
+import start_SpringBoot.responseAPI.dto.User;
 
 @RestController
 @RequestMapping("/api")
