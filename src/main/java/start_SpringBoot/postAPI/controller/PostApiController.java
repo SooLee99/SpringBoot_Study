@@ -1,6 +1,6 @@
-package startSpringBoot.postAPI.controller;
+package start_SpringBoot.postAPI.controller;
 
-import startSpringBoot.postAPI.dto.PostRequestDto;
+import start_SpringBoot.postAPI.dto.PostRequestDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

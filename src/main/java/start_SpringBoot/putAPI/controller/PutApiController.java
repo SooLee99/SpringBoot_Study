@@ -1,6 +1,6 @@
-package startSpringBoot.putAPI.controller;
+package start_SpringBoot.putAPI.controller;
 
-import startSpringBoot.putAPI.dto.PostRequestDto;
+import start_SpringBoot.putAPI.dto.PostRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

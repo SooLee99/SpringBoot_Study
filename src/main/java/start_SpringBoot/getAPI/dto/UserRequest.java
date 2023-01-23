@@ -1,4 +1,4 @@
-package startSpringBoot.getAPI.dto;
+package start_SpringBoot.getAPI.dto;
 
 public class UserRequest {
     private String name;

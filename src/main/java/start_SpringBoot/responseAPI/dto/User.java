@@ -1,6 +1,5 @@
-package startSpringBoot.responseAPI.dto;
+package start_SpringBoot.responseAPI.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

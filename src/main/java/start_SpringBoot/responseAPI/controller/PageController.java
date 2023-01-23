@@ -1,4 +1,4 @@
-package startSpringBoot.responseAPI.controller;
+package start_SpringBoot.responseAPI.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

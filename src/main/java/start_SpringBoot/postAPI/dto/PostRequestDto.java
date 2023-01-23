@@ -1,4 +1,4 @@
-package startSpringBoot.postAPI.dto;
+package start_SpringBoot.postAPI.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package startSpringBoot.putAPI.dto;
+package start_SpringBoot.putAPI.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
