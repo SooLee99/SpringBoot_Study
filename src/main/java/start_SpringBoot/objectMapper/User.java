@@ -1,4 +1,4 @@
-package startSpringBoot.objectMapper;
+package start_SpringBoot.objectMapper;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
