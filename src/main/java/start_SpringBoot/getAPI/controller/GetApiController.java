@@ -5,6 +5,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
+// ▶ HTTP GET?
+//  - HTTP POST 메서드는 특정한 리소스를 가져오도록 요청한다.
+//  - GET 요청은 데이터를 가져올 때만 사용해야 한다.
+
+// ▶ 주요 기능
+//  - 조회 / 요청
+
 // GET API (리소스 조회) => 리소스를 조회하고, 해당 도큐먼트에 대한 자세한 정보를 가져온다.
 //      - 데이터를 요청할 때, 이 요청하는 데이터가 HTTP Request Message 의 Header 부분의 url 에 담겨서 전송된다.
 //        그래서 요청시 url 상에 '?' 뒤에 데이터가 붙어 request 를 보내는 것이다.
