@@ -25,6 +25,7 @@ public class Main {
         ApplicationContext context = ApplicationContextProvider.getContext();
 
         // (3) IoC : 이 예제 안에서 new 연산자를 찾을 수 없을 것이다.
+        //           why? "스프링 컨테이너가 객체의 생명주기를 관리해주기 때문이다."
         // => 모든 권한이 스프링으로 넘어갔기 때문이다.
         // Bean : 스프링 컨테이너에서 관리되는 객체.
         Encoder encoder = context.getBean("base64Encode", Encoder.class);
