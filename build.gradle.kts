@@ -15,8 +15,11 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
-    implementation("org.springframework.boot:spring-boot-starter-aop")
-    implementation("org.springframework.boot:spring-boot-starter-web")
+
+    implementation("org.springframework.boot:spring-boot-starter-aop")  // aop
+    implementation("org.springframework.boot:spring-boot-starter-web")  // web
+    implementation("org.springframework.boot:spring-boot-starter-validation")   // validation
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
