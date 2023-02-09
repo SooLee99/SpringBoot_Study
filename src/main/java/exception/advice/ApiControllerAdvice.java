@@ -1,6 +1,5 @@
 package exception.advice;
 
-
 import exception.controller.ApiController;
 import exception.dto.Error;
 import exception.dto.ErrorResponse;
@@ -25,14 +24,17 @@ import java.util.stream.StreamSupport;
 @RestControllerAdvice(basePackageClasses = ApiController.class)
 public class ApiControllerAdvice {
 
+    // @ExceptionHandler : Controller 계층에서 발생하는 에러를 잡아서 메서드로 처리해주는 기능이다.
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity exception(Exception e){
         System.out.println(e.getClass().getName());
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("");
     }
 
+    // MethodArgumentNotValidException 에러 처리하는 메소드
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public ResponseEntity methodArgumentNotValidException(MethodArgumentNotValidException e, HttpServletRequest httpServletRequest){
+        // 에러결과를 매개변수로 사용 가능.
 
         List<Error> errorList = new ArrayList<>();
 
