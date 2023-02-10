@@ -18,8 +18,8 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-aop")  // aop
     implementation("org.springframework.boot:spring-boot-starter-web")  // web
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("org.projectlombok:lombok:1.18.22")   // validation
+    implementation("org.springframework.boot:spring-boot-starter-validation") // validation
+    implementation("org.projectlombok:lombok:1.18.22")  // lombok
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
