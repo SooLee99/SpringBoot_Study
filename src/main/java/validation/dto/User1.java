@@ -27,7 +27,8 @@ public class User1 {
 
     @YearMonth
     // 인터페이스를 제작하여 어노테이션을 별도로 처리할 수도 있다.
-    private String reqYearMonth;    // yyyyMM
+    // yyyyMM 형식의 유효성 규칙을 제작할 수 있다.
+    private String reqYearMonth;
 
     public String getReqYearMonth() {
         return reqYearMonth;
