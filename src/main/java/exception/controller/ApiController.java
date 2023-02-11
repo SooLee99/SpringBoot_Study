@@ -12,7 +12,7 @@ import validation.dto.User;
 @Validated
 public class ApiController {
 
-    @GetMapping("") // ?name=1234
+    @GetMapping("")
     public User get(
             @Size(min = 2)
             @RequestParam String name,

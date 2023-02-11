@@ -21,24 +21,33 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+// @ControllerAdvice : 여러 컨트롤러에 대해 전역적으로 ExceptionHandler를 적용해준다.
+
 @RestControllerAdvice(basePackageClasses = ApiController.class)
+// @RestControllerAdvice = @ResponseBody + @ControllerAdvice
+// @RestControllerAdvice는 전역적으로 예외를 처리할 수 있는 어노테이션입니다.
 public class ApiControllerAdvice {
 
-    // @ExceptionHandler : Controller 계층에서 발생하는 에러를 잡아서 메서드로 처리해주는 기능이다.
+    // @ExceptionHandler : 특정 Cotroller의 예외를 처리한다.
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity exception(Exception e){
-        System.out.println(e.getClass().getName());
+        System.out.println(e.getClass().getName()); // 어떤 클래스에서 에러가 발생했는지 출력.
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("");
     }
 
     // MethodArgumentNotValidException 에러 처리하는 메소드
-    @ExceptionHandler(value = MethodArgumentNotValidException.class)
+    // MethodArgumentNotValidException :
+    @ExceptionHandler(value = MethodArgumentNotValidException.class)    // 해당 패키지 하위클래스를 지정하여 해당되는 특정예외를 처리.
     public ResponseEntity methodArgumentNotValidException(MethodArgumentNotValidException e, HttpServletRequest httpServletRequest){
-        // 에러결과를 매개변수로 사용 가능.
+    // 에러결과를 매개변수로 사용 가능.
 
+        // Error 타입의 리스트 생성
         List<Error> errorList = new ArrayList<>();
 
+        // BindingResult 객체 생성
         BindingResult bindingResult = e.getBindingResult();
+
+        // 람다식 forEach로 에러의 갯수만큼 반복하며 리스트에 삽입
         bindingResult.getAllErrors().forEach(error -> {
             FieldError field = (FieldError) error;
 
@@ -61,12 +70,14 @@ public class ApiControllerAdvice {
         errorResponse.setStatusCode(HttpStatus.BAD_REQUEST.toString());
         errorResponse.setResultCode("FAIL");
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).   body(errorResponse);
     }
 
+    // ConstraintViolationException 에러 처리하는 메소드
     @ExceptionHandler(value = ConstraintViolationException.class)
     public ResponseEntity constraintViolationException(ConstraintViolationException e, HttpServletRequest httpServletRequest){
 
+        // Error 타입의 리스트 생성
         List<Error> errorList = new ArrayList<>();
 
         e.getConstraintViolations().forEach(error ->{
@@ -96,6 +107,7 @@ public class ApiControllerAdvice {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
 
+    // MissingServletRequestParameterException 에러 처리하는 메소드
     @ExceptionHandler(value = MissingServletRequestParameterException.class)
     public ResponseEntity missingServletRequestParameterException(MissingServletRequestParameterException e, HttpServletRequest httpServletRequest){
 
