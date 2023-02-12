@@ -1,4 +1,4 @@
-package ilter_and_interceptor;
+package filter_and_interceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;

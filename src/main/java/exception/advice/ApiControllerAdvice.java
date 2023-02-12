@@ -80,6 +80,7 @@ public class ApiControllerAdvice {
         // Error 타입의 리스트 생성
         List<Error> errorList = new ArrayList<>();
 
+        // getConstraintViolations() : 에러가 담겨있는 메소드 => forEach 를 통해서 결과를
         e.getConstraintViolations().forEach(error ->{
             Stream<Path.Node> stream = StreamSupport.stream(error.getPropertyPath().spliterator(), false);
             List<Path.Node> list = stream.collect(Collectors.toList());

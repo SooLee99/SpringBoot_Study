@@ -1,6 +1,6 @@
-package ilter_and_interceptor.interceptor;
+package filter_and_interceptor.interceptor;
 
-import ilter_and_interceptor.annotation.AuthUser;
+import filter_and_interceptor.annotation.AuthUser;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
