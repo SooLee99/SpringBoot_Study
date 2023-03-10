@@ -1,4 +1,4 @@
-package com.example.client.service;
+package serverToServer.client.src.main.java.com.example.client.service;
 
 import com.example.client.dto.Req;
 import com.example.client.dto.UserRequest;

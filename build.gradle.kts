@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.org.fusesource.jansi.AnsiRenderer.test
+
 plugins {
     java
     id("org.springframework.boot") version "3.0.1"
@@ -15,6 +17,8 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.6.0")    // JUnit
+    implementation("org.junit.jupiter:junit-jupiter-engine")    // JUnit
 
     implementation("org.springframework.boot:spring-boot-starter-aop")  // aop
     implementation("org.springframework.boot:spring-boot-starter-web")  // web

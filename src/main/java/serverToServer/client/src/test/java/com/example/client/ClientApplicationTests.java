@@ -1,4 +1,4 @@
-package com.example.client;
+package serverToServer.client.src.test.java.com.example.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
